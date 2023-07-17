@@ -1,0 +1,4 @@
+CREATE ROLE Members;
+CREATE ROLE StoreClerks;
+CREATE ROLE DBA;
+CREATE ROLE Management;
