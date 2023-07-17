@@ -26,7 +26,7 @@ CREATE TABLE Items(
 CREATE TABLE Transactions(
   TransactionID INT IDENTITY(1,1) PRIMARY KEY,
   UserID NVARCHAR(255) FOREIGN KEY REFERENCES [User](UserID),
-  TransactionDate DATE
+  TransactionDate DATE DEFAULT GETDATE()
 );
 
 -- Create TransactionItem table
