@@ -12,7 +12,7 @@ CREATE TABLE [User](
 
 -- Create Items table
 CREATE TABLE Items(
-  ItemID INT PRIMARY KEY,
+  ItemID NVARCHAR(255) PRIMARY KEY,
   ItemName NVARCHAR(255),
   Price DECIMAL(18,2),
   Category NVARCHAR(255),
@@ -32,7 +32,7 @@ CREATE TABLE Transactions(
 -- Create TransactionItem table
 CREATE TABLE TransactionItem(
   TransactionID INT FOREIGN KEY REFERENCES Transactions(TransactionID),
-  ItemID INT FOREIGN KEY REFERENCES Items(ItemID),
+  ItemID NVARCHAR(255) FOREIGN KEY REFERENCES Items(ItemID),
   Quantity INT,
   PRIMARY KEY (TransactionID, ItemID)  -- composite primary key
 );
