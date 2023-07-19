@@ -5,11 +5,17 @@ GRANT SELECT, UPDATE ON dbo.Membership TO Members;
 -- Members must be able to check, add, update and delete their own transactions only
 GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Transactions TO Members;
 
+-- Members must be able to check, add, update and delete their own transactions items
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.TransactionItem TO Members;
+
 -- Store Clerks must be able to manage (add, update, remove) all data except membership and transaction details
 GRANT INSERT, UPDATE, DELETE ON dbo.Items TO StoreClerks;
 
 -- Store Clerks must be able to view all transaction records (full details) but not modify them
 GRANT SELECT ON dbo.Transactions TO StoreClerks;
+
+-- Store Clerks must be able to view all transaction items but not modify them
+GRANT SELECT ON dbo.TransactionItem TO StoreClerks;
 
 -- Store Clerks must be able to add new membership data
 GRANT INSERT ON dbo.Membership TO StoreClerks;
