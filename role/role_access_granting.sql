@@ -1,6 +1,6 @@
--- Members can only update their own membership details.
+-- Members can only update their own membership details, and view them.
 -- Assuming Membership table has UserID column to identify the respective member.
-GRANT UPDATE ON dbo.Membership TO Members;
+GRANT SELECT, UPDATE ON dbo.Membership TO Members;
 
 -- Members must be able to check, add, update and delete their own transactions only
 GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Transactions TO Members;
@@ -32,3 +32,8 @@ GRANT SELECT ON SCHEMA::dbo TO Management;
 
 -- Management should not be able to view any member’s confidential data
 DENY SELECT ON OBJECT::dbo.Membership (National_registration_ID_or_passport_number) TO Management;
+
+
+-- Granting Members to have access to encryption key for demo purpose
+GRANT CONTROL ON CERTIFICATE::Cert1 TO Members;
+GRANT CONTROL ON SYMMETRIC KEY::SymKey1 TO Members;
