@@ -1,4 +1,4 @@
-
+USE DBS_Assignments;
 -- -- Step 1 --
 create master key encryption by password ='QwErTy12345!@#$%'
 

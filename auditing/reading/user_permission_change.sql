@@ -1,3 +1,4 @@
+USE DBS_Assignments;
 DECLARE @AuditFilePath VARCHAR(8000);
 
 SELECT @AuditFilePath = audit_file_path

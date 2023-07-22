@@ -2,7 +2,7 @@ USE master ;
 GO  
 
 -- Replace The path with the actual path where you want to store the audit logs
-CREATE SERVER AUDIT AllTables_DML_AUDIT  TO FILE ( FILEPATH = 'C:\Users\User\Desktop\APUfolder\Year3 Sem 2\DBS\Assignments\audditing_path' );   
+CREATE SERVER AUDIT AllTables_DML_AUDIT  TO FILE ( FILEPATH = 'C:\Users\User\Desktop\APUfolder\Year3 Sem 2\DBS\Assignments\dev_audditing_path' );   
 GO  
 
 -- Enable the server audit.   

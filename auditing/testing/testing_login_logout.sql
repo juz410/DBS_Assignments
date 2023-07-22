@@ -1,12 +1,12 @@
 USE master;
 GO
 
-CREATE LOGIN TestLogin WITH PASSWORD = 'password';
+CREATE LOGIN UserTest WITH PASSWORD = 'abcd1234';
 GO
 
 
 USE master;
 GO
 
-DROP LOGIN TestLogin;
+DROP LOGIN UserTest;
 GO

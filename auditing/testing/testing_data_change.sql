@@ -1,3 +1,4 @@
+USE DBS_Assignments;
 EXECUTE AS USER = 'normalMember01';
 SELECT * FROM Transactions;
 REVERT;

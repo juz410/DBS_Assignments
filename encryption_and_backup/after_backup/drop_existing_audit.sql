@@ -1,0 +1,14 @@
+USE DBS_Assignments;
+GO
+
+ALTER DATABASE AUDIT SPECIFICATION AllTables_DML_Specifications WITH (STATE = OFF);
+DROP DATABASE AUDIT SPECIFICATION AllTables_DML_Specifications;
+GO
+
+ALTER DATABASE AUDIT SPECIFICATION AllTables_StructureChange_Specification WITH (STATE = OFF);
+DROP DATABASE AUDIT SPECIFICATION AllTables_StructureChange_Specification;
+GO
+
+ALTER DATABASE AUDIT SPECIFICATION PermissionChange_Database_Specifications WITH (STATE = OFF);
+DROP DATABASE AUDIT SPECIFICATION PermissionChange_Database_Specifications;
+GO
