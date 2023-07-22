@@ -1,0 +1,28 @@
+USE DBS_Assignments
+GO
+
+
+EXECUTE AS USER = 'DBA01';
+CREATE TABLE TestTable(
+    TestID INT PRIMARY KEY,
+    TestName VARCHAR(50) NOT NULL
+);
+GO
+
+CREATE USER TestUser WITHOUT LOGIN;
+GO
+
+GRANT SELECT ON TestTable TO TestUser;
+GO
+
+REVOKE SELECT ON TestTable TO TestUser;
+GO
+
+DROP TABLE TestTable;
+GO
+
+DROP USER TestUser;
+GO
+
+
+REVERT;

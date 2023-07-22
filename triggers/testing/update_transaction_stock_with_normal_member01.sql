@@ -8,7 +8,7 @@ REVERT;
 
 EXECUTE AS USER = 'normalMember01';
 UPDATE TransactionItem
-SET Quantity = 3
+SET Quantity = 10
 WHERE TransactionID = 1 AND ItemID = 'P003';
 REVERT;
 
